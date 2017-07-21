@@ -1,0 +1,17 @@
+Located in {{item.city}}, this {{item.bedrooms}} bedroom {{item.type}} is available by arrangement through {{item.owner}}.
+<br> {{item-popularity item}}
+<p><img src= {{item.image}} alt= {{item.type}}></p>
+<hr>
+<h2><u> Reviews </u></h2>
+<div class="reviews-sorted">
+    {{#each sortedReviews as |review|}}
+      {{review-tile review=review destroyReview="destroyReview"}}
+    {{/each}}
+</div>
+<hr>
+
+<div>
+  <h3>Map of {{item.owner}}'s {{item.type}}</h3> {{google-map item=item}}
+</div>
+
+<button {{action 'delete' item}}>Delete</button>

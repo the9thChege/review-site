@@ -1,0 +1,17 @@
+<h1> Wilkommen </h1>
+
+<div class="itemList">
+  <h2> Pick your fancy </h2>
+  {{#each model.items as |item|}}
+    {{item-tile item=item}} {{item-popularity item}} {{item-cost item}}
+    <hr>
+  {{/each}}
+</div>
+
+{{new-item saveItem2="saveItem3"}}
+
+<hr>
+
+{{#link-to 'about'}}About{{/link-to}}
+<br>
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}}

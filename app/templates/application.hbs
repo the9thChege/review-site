@@ -1,5 +1,15 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class= "container">
+  <header class= "jumbotron">
+    <h1>Sharp Sharp</h1>
+    <div class="container-fluid page-links">
+      {{#link-to 'index'}}Home{{/link-to}}
+      {{#link-to 'about'}}About Us{{/link-to}}
+      {{#link-to 'contact'}}Contact Us{{/link-to}}
+    </div>
+  </header>
+    {{outlet}}
+  <hr>
+  <footer>
+    {{#link-to 'contact'}}Our representatives would love to help!{{/link-to}}
+  </footer>
+</div>
